@@ -12,4 +12,23 @@ class UtilsGnu < Formula
   def install
     prefix.install "README.md" if File.exist?("README.md")
   end
+
+  def caveats
+    <<~EOS
+      e-jerk GPU-accelerated utilities (GNU-fallback builds) installed:
+        grep, find, gawk, sed
+
+      These include full GNU backend support (--gnu flag).
+
+      To use them instead of system versions, ensure Homebrew's
+      bin directory comes first in your PATH:
+
+        echo 'export PATH="$(brew --prefix)/bin:$PATH"' >> ~/.zshrc
+        source ~/.zshrc
+
+      Verify with:
+        which grep   # should show #{HOMEBREW_PREFIX}/bin/grep
+        grep --help  # shows --gnu backend option
+    EOS
+  end
 end
