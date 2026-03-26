@@ -40,6 +40,15 @@ brew tap e-jerk/utils
 brew install e-jerk/utils/utils
 ```
 
+### macOS PATH Override
+
+macOS ships `/usr/bin/sed`, `/usr/bin/find`, and `/usr/bin/grep` from Apple. To use the e-jerk versions by default:
+
+```bash
+echo 'export PATH="$(brew --prefix)/bin:$PATH"' >> ~/.zshrc
+source ~/.zshrc
+```
+
 ## Quick Start
 
 All utilities work as drop-in replacements with automatic backend selection:
