@@ -7,18 +7,18 @@ class Find < Formula
   on_macos do
     on_arm do
       url "https://github.com/e-jerk/find/releases/download/v#{version}/find-gnu-macos-arm64-v#{version}.tar.gz"
-      sha256 "b8b42a7dbebadedb8fee015d2122bee92f95070a8091ddb803cd3a65f1cc4117" # macos-arm64
+      sha256 "588330be05ac4a37525f0658748f0446aff2102025b3d5677ab274b2f1248e50" # macos-arm64
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/e-jerk/find/releases/download/v#{version}/find-gnu-linux-arm64-v#{version}.tar.gz"
-      sha256 "7ac1604e3694fe6da2fd30b6b6909b4b68f1a59326801390fd9aa6a0c029d1c2" # linux-arm64
+      sha256 "21ffb334891974fbafdbcd9aaeeb0d1d1a06645cf5ac091270d7257e29bd2eac" # linux-arm64
     end
     on_intel do
       url "https://github.com/e-jerk/find/releases/download/v#{version}/find-gnu-linux-amd64-v#{version}.tar.gz"
-      sha256 "f8f2b989deaae113eff9f6284a30752a4105d040f795bc01adafaedcae49b95e" # linux-amd64
+      sha256 "df800307178c3aa6e841787c2f3ee4056c8d8e8e1b3963b1ee208fb1f6fe0dc0" # linux-amd64
     end
     depends_on "vulkan-loader"
   end
