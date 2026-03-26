@@ -1,24 +1,24 @@
 class Gawk < Formula
   desc "GPU-accelerated gawk with all backends (Metal + Vulkan on macOS, Vulkan on Linux)"
   homepage "https://github.com/e-jerk/gawk"
-  version "0.1.0"
+  version "0.2.0"
   license "GPL-3.0-or-later"
 
   on_macos do
     on_arm do
       url "https://github.com/e-jerk/gawk/releases/download/v#{version}/gawk-gnu-macos-arm64-v#{version}.tar.gz"
-      sha256 "839c135ac2a8db0a46cda9e7c35defd51c231a5c1da862058398dc617a9a852a" # macos-arm64
+      sha256 "14948f7377f323477c7789d021523bacbcfacef4c6d677692475adf6f448e250" # macos-arm64
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/e-jerk/gawk/releases/download/v#{version}/gawk-gnu-linux-arm64-v#{version}.tar.gz"
-      sha256 "b5f84a4945d787efffa70758924d859fa5b3c4fe356d397b05fae16589759b89" # linux-arm64
+      sha256 "6f299083fd14cc2edaa12e4940f996e529fa1937ad9638e561dbc5b688b68550" # linux-arm64
     end
     on_intel do
       url "https://github.com/e-jerk/gawk/releases/download/v#{version}/gawk-gnu-linux-amd64-v#{version}.tar.gz"
-      sha256 "fba0d9b670727f044fd7425537e2d90dc16f1629c3c879f24807aa694e6dcd14" # linux-amd64
+      sha256 "08e65a721c971867af3620b25997ba8deb65d43e0165561ce8b54263e03d40c8" # linux-amd64
     end
     depends_on "vulkan-loader"
   end
