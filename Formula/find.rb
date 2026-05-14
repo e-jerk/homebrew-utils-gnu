@@ -1,24 +1,24 @@
 class Find < Formula
   desc "GPU-accelerated find with all backends (Metal + Vulkan on macOS, Vulkan on Linux)"
   homepage "https://github.com/e-jerk/find"
-  version "0.2.0"
+  version "0.4.0"
   license "GPL-3.0-or-later"
 
   on_macos do
     on_arm do
       url "https://github.com/e-jerk/find/releases/download/v#{version}/find-gnu-macos-arm64-v#{version}.tar.gz"
-      sha256 "588330be05ac4a37525f0658748f0446aff2102025b3d5677ab274b2f1248e50" # macos-arm64
+      sha256 "2b91bea8abcd8890b450d7f6e5a58de35221025041cde1ba673634567aaab8d9" # macos-arm64
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/e-jerk/find/releases/download/v#{version}/find-gnu-linux-arm64-v#{version}.tar.gz"
-      sha256 "21ffb334891974fbafdbcd9aaeeb0d1d1a06645cf5ac091270d7257e29bd2eac" # linux-arm64
+      sha256 "a8a0fd446eb8ead1d48c77f7610346fca5b221d706ff9c463981c30a64eb786b" # linux-arm64
     end
     on_intel do
       url "https://github.com/e-jerk/find/releases/download/v#{version}/find-gnu-linux-amd64-v#{version}.tar.gz"
-      sha256 "df800307178c3aa6e841787c2f3ee4056c8d8e8e1b3963b1ee208fb1f6fe0dc0" # linux-amd64
+      sha256 "2b7559a457553f482320789944fb72f0fdf0c0869030fde15508745d80b7eb2e" # linux-amd64
     end
     depends_on "vulkan-loader"
   end
