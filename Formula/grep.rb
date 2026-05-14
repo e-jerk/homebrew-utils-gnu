@@ -1,24 +1,24 @@
 class Grep < Formula
   desc "GPU-accelerated grep with all backends (Metal + Vulkan on macOS, Vulkan on Linux)"
   homepage "https://github.com/e-jerk/grep"
-  version "0.4.0"
+  version "0.5.0"
   license "GPL-3.0-or-later"
 
   on_macos do
     on_arm do
       url "https://github.com/e-jerk/grep/releases/download/v#{version}/grep-gnu-macos-arm64-v#{version}.tar.gz"
-      sha256 "912be1a3a2e144563d8a95efdf8251f875b11b071fd9aaf40269c9223f785f5c" # macos-arm64
+      sha256 "f906d6960327a34cafb8023295785f97fdc640cc7692b32ff5ac7d741b7c320c" # macos-arm64
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/e-jerk/grep/releases/download/v#{version}/grep-gnu-linux-arm64-v#{version}.tar.gz"
-      sha256 "ad08e7f87e467b8f551942fe36497041b236690bad66a67538cac9b8d8bdfa80" # linux-arm64
+      sha256 "0c012476474eb83d9cb64c544cf851025d7424d3fae2f097450b70129a27213f" # linux-arm64
     end
     on_intel do
       url "https://github.com/e-jerk/grep/releases/download/v#{version}/grep-gnu-linux-amd64-v#{version}.tar.gz"
-      sha256 "7556fbea1ff17efa6cba66187ac587cfd362b3fee6c705cf33d94a7d05056a83" # linux-amd64
+      sha256 "821d277aece3f774bad41d4dd6b49521e3b83745e5eeeb423fa2db23e1c31c0a" # linux-amd64
     end
     depends_on "vulkan-loader"
   end
